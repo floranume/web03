@@ -1,0 +1,818 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red-color: #DE0000;
+    --yellow-color: #FFC700;
+    --font-color: #000;
+    --white-color: #fff;
+    --bovien-color: #B7B7B7;
+    --gach-chan: #DDDDDD;
+}
+
+html p {
+    margin: 0;
+}
+
+
+header .top-header {
+    background-color: var(--red-color);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+    font-weight: 300;
+    font-size: 14px;
+
+}
+
+.top-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.top-header .address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-header .address i {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.header-main {
+    height: 190px;
+
+}
+
+.header-main .header-main-dathang {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-main .header-main-dathang .search-box .src-input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border: 0.5px solid var(--bovien-color);
+    position: relative;
+}
+
+.header-main .header-main-dathang .btn {
+    width: 100%px;
+    border: none;
+
+    border-radius: 0;
+    background-color: var(--red-color);
+    font-size: 12px;
+    margin-bottom: 4px;
+    margin-right: 5px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.header-main .header-main-dathang .call,
+.header-main .header-main-dathang .cart,
+.header-main .nav,
+.header-main .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red-color);
+}
+
+.header-main .header-main-dathang .call i {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.header-main .call {
+    justify-content: left !important;
+}
+
+.header-main .header-main-dathang .cart {
+    background-color: var(--yellow-color);
+    padding: 3px 5px;
+    border-radius: 5px;
+    width: 130px;
+    color: #fff;
+    position: relative;
+}
+
+.header-main .header-main-dathang .cart i {
+    margin-right: 15px;
+}
+
+.header-main .header-main-dathang .cart i::after {
+    content: ' .1';
+    display: inline-block;
+    border-radius: 50px;
+    background-color: var(--red-color);
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    font-size: 10px;
+
+
+}
+
+.header-main .nav {
+    justify-content: space-between;
+    margin: 20px 0;
+    color: var(--font-color);
+
+}
+
+.header-main .nav .item {
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-main .nav .home {
+    color: var(--red-color);
+}
+
+.header-main .nav i {
+    font-size: 25px;
+}
+
+.header-main .nav .item::after {
+    content: '';
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    background-color: #000;
+    bottom: -5px;
+    left: 0;
+    display: inline-block;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    transition-delay: 0.1s;
+
+
+
+}
+
+.header-main .nav .item:hover::after {
+    width: 100%;
+    opacity: 0.95;
+    background-color: var(--yellow-color);
+
+}
+
+.menu-tab {
+    background-color: var(--bovien-color);
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: var(--font-color);
+    height: 40px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+
+}
+
+.menu-tab a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.food-content {
+    height: 718px;
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.food-content .food-content-img img {
+    width: 100%;
+    height: 550px;
+}
+
+.food-content .food-content-nd .food-content-h {
+    height: 80px;
+    width: 100%;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.food-content .food-content-nd .food-content-rating {
+    display: flex;
+    align-items: center;
+    height: 18px;
+    margin-bottom: 20px;
+}
+
+.food-content .food-content-nd .food-content-rating .rating-icon {
+    margin-right: 30px;
+    color: var(--yellow-color);
+
+}
+
+.food-content .food-content-nd .food-content-price {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.food-content .food-content-nd .food-content-price .price-old {
+    color: var(--bovien-color);
+    text-decoration: line-through;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.food-content .food-content-nd .food-content-price .price-new {
+    color: var(--red-color);
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.food-content .food-content-nd .food-content-icon {
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.food-content .food-content-nd .food-content-icon i {
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+
+}
+
+.food-content .food-content-nd .food-content-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.food-content .food-content-nd .food-content-cart .food-content-cart-select,
+.food-content .food-content-nd .food-content-cart .food-content-cart-giohang,
+.food-content .food-content-nd .food-content-cart .food-content-cart-muangay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-content .food-content-nd .food-content-cart .food-content-cart-select {
+    background-color: var(--red-color);
+    color: #fff;
+    width: 80px;
+    height: 41px;
+    border-radius: 5px;
+
+
+}
+
+
+.food-content .food-content-nd .food-content-cart .food-content-cart-giohang {
+
+    background-color: var(--red-color);
+    color: #fff;
+    width: 160px;
+    height: 41px;
+    border-radius: 5px;
+    margin: 0 22px;
+
+}
+
+.food-content .food-content-nd .food-content-cart .food-content-cart-muangay {
+    background-color: #42A742;
+    color: #fff;
+    width: 100px;
+    height: 41px;
+    border-radius: 5px;
+}
+
+.food-content .food-content-nd .food-content-advise {
+    margin-bottom: 20px;
+}
+
+.food-content .food-content-nd .food-content-advise p {
+    font-weight: 400;
+}
+
+.food-content .food-content-nd .food-content-advise .food-content-advise-box {
+    border: 7px solid #000;
+    border-radius: 7px;
+    position: relative;
+    margin: 5px 0;
+    list-style: none;
+    height: 70px;
+
+}
+
+.food-content .food-content-nd .food-content-advise .food-content-advise-box input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.food-content .food-content-nd .food-content-advise .food-content-advise-box button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 300px;
+    background-color: var(--red-color);
+    color: #fff;
+    font-size: 30px;
+    border: none;
+
+}
+
+.food-content .food-content-service {
+    display: flex;
+    flex-direction: column;
+}
+
+.food-content .food-content-service .food-service-camket-h,
+.food-content .food-content-service .food-service-shipper-h,
+.food-content .food-content-service .food-service-newday-h {
+    background-color: var(--yellow-color);
+    color: #fff;
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    border-radius: 10px 10px 0 0;
+
+}
+
+.food-content .food-content-service .food-service-camket-nd,
+.food-content .food-content-service .food-service-shipper-nd,
+.food-content .food-content-service .food-service-newday-nd {
+    border: 2px solid var(--bovien-color);
+    height: 256px;
+    margin-bottom: 20px;
+}
+
+.food-content .food-content-service .food-service-shipper-nd {
+    margin: 0;
+}
+
+.food-content .food-content-service .food-service-camket-nd .food-camket-item {
+    display: flex;
+    margin: 10px;
+}
+
+.food-content .food-content-service .food-service-camket-nd .food-camket-item .item-img {
+    margin-right: 15px;
+}
+
+.food-content .food-content-service .food-service-shipper-nd {
+    /* padding: 20px; */
+    height: 307px;
+    text-align: center;
+    position: relative;
+
+}
+
+.food-content .food-content-service .food-service-shipper-nd .item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.food-content .food-content-service .food-service-shipper-nd p {
+    font-size: 17px;
+    height: 17px;
+    margin: 10px 0;
+}
+
+.food-content .food-content-service .food-service-shipper-nd .item-nd-vector p {
+    position: relative;
+}
+
+.food-content .food-content-service .food-service-shipper-nd .item-nd-vector p::before {
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background-color: var(--bovien-color);
+    position: absolute;
+    left: 0;
+    margin-top: 12px;
+}
+
+.food-content .food-content-service .food-service-shipper-nd .item-nd-vector p::after {
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background-color: var(--bovien-color);
+    position: absolute;
+    right: 0;
+    margin-top: 12px;
+    padding: -20px;
+}
+
+.food-content .food-content-service .food-service-shipper-nd .sdt {
+    margin-bottom: 20px;
+    color: var(--red-color);
+}
+
+.food-content .food-content-service .food-service-shipper-nd .sdt p {
+    font-size: 25px;
+    font-weight: 800
+}
+
+.food-content .food-content-service .food-service-shipper-bot {
+    background-color: var(--yellow-color);
+    color: #fff;
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 20px;
+
+}
+
+.food-content .food-content-service .food-item1 {
+    margin-top: 10px;
+}
+
+.food-content .food-content-service .food-newday-item {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin: 20px 20px;
+}
+
+.food-content .food-content-service .food-service-newday-nd {
+    height: 260px;
+}
+
+.food-content .food-content-service .food-newday-item-img {
+    margin-right: 10px;
+}
+
+
+
+.food-content-ex .food-content-ex-h {
+    height: 445px;
+    /* background-color: #E0E0E0; */
+    position: relative;
+    display: flex;
+
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-ct {
+    position: relative;
+    position: absolute;
+    top: -100px;
+    font-size: 30px;
+    font-weight: 700;
+
+
+}
+
+.food-content-ex .food-content-ex-h::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    right: 10px;
+    top: -45px;
+    left: 10px;
+
+}
+
+.food-content-ex .food-content-ex-h::before {
+    content: '';
+    display: inline-block;
+    width: 30%;
+    height: 4px;
+    background-color: #d3e014;
+    position: absolute;
+    left: 0px;
+    top: -45px;
+    z-index: 5;
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-rating {
+    width: 100%;
+    height: 342px;
+    /* margin-right: 50px; */
+    background-color: #F5F5F5;
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem {
+    width: 100%;
+    height: 400px;
+    background-color: #EBEBEB;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 20px;
+    box-sizing: border-box;
+    /* margin-left: 40px; */
+
+
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem .star {
+
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: var(--yellow-color);
+    display: flex;
+    justify-content: center;
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem .food-rating {
+    display: flex;
+    justify-content: center;
+    max-width: max-content;
+    position: relative;
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem .rating-name {
+    margin-right: 10px;
+    width: 100%;
+    border: none;
+    height: 39px;
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem .rating-email {
+    margin-left: 10px;
+    width: 100%;
+    border: none;
+    height: 39px;
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem input {
+    height: 39px;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem .food-rating-text textarea {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem .food-rating-send-img {
+    display: flex;
+    align-items: center;
+
+    color: blue;
+    font-size: 17px;
+    margin-bottom: 10px;
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem .food-rating-send-img .send-icon {
+    margin-right: 20px;
+    font-size: 30px;
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-problem .food-rating-btn button {
+    width: 100%;
+    padding: 5px;
+    border-radius: 7px;
+    color: #fff;
+    background-color: #333;
+    font-size: 20px;
+    height: 38px;
+}
+
+.food-content-ex .food-content-ex-h .food-content-rating {
+    padding: 20px;
+    height: 400px;
+}
+
+.food-content-ex .food-content-ex-h .food-content-rating-h {
+
+    display: inline-flex;
+    margin-bottom: 20px;
+
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-rating-h p {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.food-content-ex .food-content-ex-h .food-content-rating-h .rating-star {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 20px;
+    color: #E0E0E0;
+}
+
+.food-content-ex .food-content-ex-h .food-content-rating-h .rating-star i {
+    margin-left: 10px;
+}
+
+.food-content-ex .food-content-ex-h .food-content-rating-nd .rating-people {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.food-content-ex .food-content-ex-h .food-content-rating-nd .rating-people .rating-people-load {
+    width: 144px;
+    height: 10px;
+    background-color: #f0eaea;
+    border-radius: 10px;
+    margin: 0 15px;
+
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-rating-nd .rating-people .rating-people-star {
+    color: var(--yellow-color);
+}
+
+.food-content-ex .food-content-ex-h .food-content-filter {
+    position: absolute;
+    bottom: 0;
+}
+
+.food-content-ex .food-content-ex-h .food-content-filter {
+    display: flex;
+    align-items: center;
+
+}
+
+.food-content-ex .food-content-ex-h .food-content-filter .filter-item {
+    margin-left: 20px;
+    background-color: var(--gach-chan);
+    padding: 2px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-content-ex .food-content-ex-h .food-content-filter .filter-item i {
+    margin-left: 5px;
+    margin-bottom: 2px;
+    color: #B7B7B7;
+}
+
+.luu-y {
+    height: 84px;
+    width: 100%;
+    background-color: var(--yellow-color);
+    margin: 71px 0 64px;
+
+}
+
+.luu-y .container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.luu-y .luu-y-icon {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.luu-y .luu-y-h,
+.food-seen .food-seen-h {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.food-seen {
+    margin-bottom: 32px;
+}
+
+.food-seen .food-seen-h {
+    position: relative;
+}
+
+.food-seen .food-seen-h::before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    display: inline-block;
+    background-color: #000;
+    bottom: -10px;
+    position: absolute;
+}
+
+.food-seen .food-seen-h::after {
+    content: '';
+    width: 23%;
+    height: 4px;
+    display: inline-block;
+    background-color: var(--yellow-color);
+    bottom: -10px;
+    position: absolute;
+    left: 0;
+}
+
+.food-list {
+    margin-bottom: 64px;
+}
+
+.food-list .food-list-item .food-item-img img {
+    width: 100%;
+
+}
+
+.food-list .food-list-item .food-item-h {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--yellow-color);
+    padding-top: 30px;
+}
+
+footer .addr-item {
+    display: flex;
+    margin-top: 10px;
+    text-align: left;
+}
+
+footer .addr-h,
+footer .menu-foot-h,
+footer .fanpage-h,
+footer .map-h {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+footer .addr-item {
+    margin: 20px;
+}
+
+footer .addr-icon .bi {
+    margin-right: 18px;
+    font-size: 27px;
+}
+
+footer .addr .bi {
+    margin-right: 10px;
+    font-size: 20px;
+
+}
+
+footer .menu-foot-nd p {
+    margin: 20px 0;
+}
+
+footer .footer-bot {
+    text-align: center;
+    background-color: var(--red-color);
+    color: #fff;
+    padding: 10px;
+    font-weight: 200;
+}
